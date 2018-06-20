@@ -56,4 +56,10 @@
     console.log($(this));
   });
 
+  $('#question').submit(function() {
+
+
+    // return false;
+  });
+
 })(jQuery);

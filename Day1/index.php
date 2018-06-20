@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html>
 
@@ -21,7 +18,7 @@
   <div class="container-fluid">
     <div class="row justify-content-center my-3">
       <div class="col-md-6">
-        <form>
+        <form method="get" action="add_question.php" id="question">
           <div class="form-group">
             <label>Question</label>
             <input type="text" class="form-control" name="question" placeholder="Enter question">
@@ -53,7 +50,7 @@
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                       <button type="button" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
@@ -77,7 +74,7 @@
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                       <button type="button" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
@@ -92,7 +89,7 @@
 				        	<div class="btn-group" role="group" aria-label="Basic example">
 									  <button type="button" class="btn btn-link text-success" data-toggle="modal" data-target="#answer1">Answer</button>
 									  <button type="button" class="btn btn-link text-info" data-toggle="modal" data-target="#editQues1" data-parent=".card-header">Edit</button>
-									  <button type="button" class="btn btn-link text-danger">Delete</button>
+									  <button type="button" class="btn btn-link text-danger" data-toggle="modal" data-target="#deleteQnA" data-id="1" data-qna="qna">Delete</button>
 									</div>
 								</div>
 				      </h5>
@@ -116,7 +113,7 @@
                         </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-primary">Submit</button>
                       </div>
                     </div>
@@ -130,7 +127,7 @@
                 <hr>
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <button type="button" class="btn btn-link text-info" data-toggle="modal" data-target="#editAnswer1" data-parent=".card-body">Edit</button>
-                  <button type="button" class="btn btn-link text-danger">Delete</button>
+                  <button type="button" class="btn btn-link text-danger" data-toggle="modal" data-target="#deleteQnA" data-id="1" data-qna="qna">Delete</button>
                 </div>
               </div>
               <div class="card-body">
@@ -139,11 +136,12 @@
                 <hr>
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <button type="button" class="btn btn-link text-info" data-toggle="modal" data-target="#editAnswer1" data-parent=".card-body">Edit</button>
-                  <button type="button" class="btn btn-link text-danger">Delete</button>
+                  <button type="button" class="btn btn-link text-danger" data-toggle="modal" data-target="#deleteQnA" data-id="1" data-qna="qna">Delete</button>
                 </div>
               </div>
             </div>
           </div>
+          
           <div class="card">
             <!-- Modal Answer and Edit question -->
             <div class="modal fade" id="answer2">
@@ -163,7 +161,7 @@
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                       <button type="button" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
@@ -187,7 +185,7 @@
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                       <button type="button" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
@@ -201,7 +199,7 @@
 				        	<div class="btn-group" role="group" aria-label="Basic example">
 									  <button type="button" class="btn btn-link text-success" data-toggle="modal" data-target="#answer2">Answer</button>
 									  <button type="button" class="btn btn-link text-info" data-toggle="modal" data-target="#editQues2" data-parent=".card-header">Edit</button>
-									  <button type="button" class="btn btn-link text-danger">Delete</button>
+									  <button type="button" class="btn btn-link text-danger" data-toggle="modal" data-target="#deleteQnA" data-id="1" data-qna="qna">Delete</button>
 									</div>
 								</div>
 				      </h5>
@@ -225,7 +223,7 @@
                         </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-primary">Submit</button>
                       </div>
                     </div>
@@ -239,7 +237,7 @@
                 <hr>
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <button type="button" class="btn btn-link text-info" data-toggle="modal" data-target="#editAnswer2" data-parent=".card-body">Edit</button>
-                  <button type="button" class="btn btn-link text-danger">Delete</button>
+                  <button type="button" class="btn btn-link text-danger" data-toggle="modal" data-target="#deleteQnA" data-id="1" data-qna="qna">Delete</button>
                 </div>
               </div>
             </div>
@@ -263,7 +261,7 @@
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                       <button type="button" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
@@ -287,7 +285,7 @@
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                       <button type="button" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
@@ -302,7 +300,7 @@
 				        	<div class="btn-group" role="group" aria-label="Basic example">
 									  <button type="button" class="btn btn-link text-success" data-toggle="modal" data-target="#answer3">Answer</button>
 									  <button type="button" class="btn btn-link text-info" data-toggle="modal" data-target="#editQues3" data-parent=".card-header">Edit</button>
-									  <button type="button" class="btn btn-link text-danger">Delete</button>
+									  <button type="button" class="btn btn-link text-danger" data-toggle="modal" data-target="#deleteQnA" data-id="1" data-qna="qna">Delete</button>
 									</div>
 								</div>
 				      </h5>
@@ -326,7 +324,7 @@
                         </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-primary">Submit</button>
                       </div>
                     </div>
@@ -340,7 +338,7 @@
                 <hr>
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <button type="button" class="btn btn-link text-info" data-toggle="modal" data-target="#editAnswer3" data-parent=".card-body">Edit</button>
-                  <button type="button" class="btn btn-link text-danger">Delete</button>
+                  <button type="button" class="btn btn-link text-danger" data-toggle="modal" data-target="#deleteQnA" data-id="1" data-qna="qna">Delete</button>
                 </div>
               </div>
             </div>
@@ -348,6 +346,7 @@
         </div>
       </div>
     </div>
+    
     <div class="modal fade" id="exampleModal">
       <div class="modal-dialog">
         <form>
@@ -369,8 +368,26 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
               <button type="button" class="btn btn-primary">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal fade" id="deleteQnA">
+      <div class="modal-dialog">
+        <form>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Are you want to delete?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Yes</button>
             </div>
           </div>
         </form>
