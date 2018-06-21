@@ -1,6 +1,6 @@
 <?php 
- session_start();
 	include("db.php");
+ 	session_start();	
 
 	$email = $_POST['email'];
 	$password = $_POST['password'];
@@ -16,6 +16,7 @@
 
 	if ($user) {
 		$_SESSION['signed_in'] = true;
+		$_SESSION['user_id'] = $user['id'];
 	}
 
 	header('location: index.php');

@@ -1,9 +1,10 @@
 <?php
 	include("db.php");
+	session_start();
 
 	$question_id = $_POST['id'];
 	$answer = $_POST['answer'];
-	$user_id = 2;
+	$user_id = $_SESSION['user_id'];
 
 	$query_insert_anwer = "INSERT INTO qna__answers (answer, user_id, question_id) VALUES (:fanswer, :fuser_id, :fquestion_id)";
 

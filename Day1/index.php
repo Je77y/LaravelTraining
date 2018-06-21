@@ -1,5 +1,5 @@
 <?php 
-   session_start();
+  session_start();
   include("db.php");
   $database = new Database();
   $query_question = "SELECT id, question FROM qna__questions ORDER BY id DESC";
@@ -43,7 +43,7 @@
         <form method="get" action="add_question.php">
           <div class="form-group">
             <label>Question <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" name="question" placeholder="Enter question" required>
+            <input type="text" class="form-control" name="question" placeholder="Enter question" required autofocus>
             <small class="form-text text-muted">You can ask any question.</small>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
@@ -113,7 +113,7 @@
             <div class="modal-body">
               <div class="form-group">
                 <label class="col-form-label">Email <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" name="email" placeholder="Enter email" required>
+                <input type="text" class="form-control" name="email" placeholder="Enter email" required autofocus>
               </div>
               <div class="form-group">
                 <label class="col-form-label">Password <span class="text-danger">*</span></label>
@@ -143,7 +143,7 @@
               <input type="hidden" name="id">
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Answer <span class="text-danger">*</span></label>
-                <textarea class="form-control" rows="5" placeholder="Enter answer" name="answer" required></textarea>
+                <textarea class="form-control" rows="5" placeholder="Enter answer" name="answer" required autofocus></textarea>
               </div>
             </div>
             <div class="modal-footer">
@@ -170,7 +170,7 @@
                 <input type="hidden" name="id">
                 <div class="form-group">
                   <label for="recipient-name" class="col-form-label">Question:</label>
-                  <input type="text" class="form-control" name="question" placeholder="Enter question">
+                  <input type="text" class="form-control" name="question" placeholder="Enter question" autofocus>
                 </div>
               </div>
               <div class="modal-footer">
@@ -218,7 +218,7 @@
               <input type="hidden" name="id">
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Answer:</label>
-                <textarea class="form-control" name="answer" rows="5" placeholder="Enter question"></textarea>
+                <textarea class="form-control" name="answer" rows="5" placeholder="Enter question" autofocus></textarea>
               </div>
             </div>
             <div class="modal-footer">
